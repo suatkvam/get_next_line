@@ -51,17 +51,17 @@ char	*update_stash(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash;
+	static char	*stash[1024];
 	char		*buffer;
 	ssize_t		read_byte;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer = calloc(1, BUFFER_SIZE + 1);
+	buffer = ft_calloc(1, BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
-	while (!ft_strchr(stash, '\n'))
+	while (!ft_strchr(stash[fd], '\n'))
 	{
 		read_byte = read(fd, buffer, BUFFER_SIZE);
 		if (read_byte == -1)
@@ -69,10 +69,10 @@ char	*get_next_line(int fd)
 		if (read_byte == 0)
 			break ;
 		buffer[read_byte] = '\0';
-		stash = ft_strjoin(stash, buffer);
+		stash[fd] = ft_strjoin(stash[fd], buffer);
 	}
 	free(buffer);
 	line = extract_line(stash);
-	stash = update_stash(stash);
+	stash[fd] = update_stash(stash);
 	return (line);
 }

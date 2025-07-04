@@ -58,7 +58,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer = calloc(1, BUFFER_SIZE + 1);
+	buffer = ft_calloc(1, BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
 	while (!ft_strchr(stash, '\n'))
