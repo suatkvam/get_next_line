@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 21:07:36 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/04 21:10:56 by akivam           ###   ########.fr       */
+/*   Updated: 2025/07/04 21:13:25 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*update_stash(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash[10200];
+	static char	*stash[MAX_FD];
 	char		*buffer;
 	ssize_t		read_byte;
 	char		*line;

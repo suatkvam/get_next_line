@@ -6,14 +6,14 @@
 /*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 21:07:23 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/04 21:07:24 by akivam           ###   ########.fr       */
+/*   Updated: 2025/07/04 21:13:14 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# ifndef BUFFER_SIZE 42
+# ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
 
