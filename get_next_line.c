@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/04 21:07:25 by akivam            #+#    #+#             */
+/*   Updated: 2025/07/04 21:07:52 by akivam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -14,6 +26,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
 char	*extract_line(char *stash)
 {
 	char	*newline;
@@ -29,6 +42,7 @@ char	*extract_line(char *stash)
 		i = ft_strlen(stash);
 	return (ft_substr(stash, 0, i));
 }
+
 char	*update_stash(char *stash)
 {
 	size_t	i;

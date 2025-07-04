@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/04 21:07:36 by akivam            #+#    #+#             */
+/*   Updated: 2025/07/04 21:10:56 by akivam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -14,6 +26,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
 char	*extract_line(char *stash)
 {
 	char	*newline;
@@ -29,6 +42,7 @@ char	*extract_line(char *stash)
 		i = ft_strlen(stash);
 	return (ft_substr(stash, 0, i));
 }
+
 char	*update_stash(char *stash)
 {
 	size_t	i;
@@ -51,7 +65,7 @@ char	*update_stash(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash[1024];
+	static char	*stash[10200];
 	char		*buffer;
 	ssize_t		read_byte;
 	char		*line;
@@ -72,7 +86,7 @@ char	*get_next_line(int fd)
 		stash[fd] = ft_strjoin(stash[fd], buffer);
 	}
 	free(buffer);
-	line = extract_line(stash);
-	stash[fd] = update_stash(stash);
+	line = extract_line(stash[fd]);
+	stash[fd] = update_stash(stash[fd]);
 	return (line);
 }
