@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 21:07:30 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/05 11:37:55 by akivam           ###   ########.fr       */
+/*   Updated: 2025/07/05 12:58:43 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (ptr);
 }
+
 char	*ft_strjoin(const char *stash, const char *buffer)
 {
 	char	*new_str;
