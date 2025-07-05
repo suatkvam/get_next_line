@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 21:07:36 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/04 21:13:25 by akivam           ###   ########.fr       */
+/*   Updated: 2025/07/05 10:18:39 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,9 @@ char	*extract_line(char *stash)
 
 char	*update_stash(char *stash)
 {
-	size_t	i;
 	char	*new_stash;
 	char	*new_line;
 
-	i = 0;
 	if (!stash)
 		return (NULL);
 	new_line = ft_strchr(stash, '\n');
