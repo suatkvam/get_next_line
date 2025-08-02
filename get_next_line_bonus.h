@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 21:07:33 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/05 10:17:02 by akivam           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
@@ -21,8 +9,6 @@
 #  define MAX_FD 10200
 # endif
 
-# include <fcntl.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

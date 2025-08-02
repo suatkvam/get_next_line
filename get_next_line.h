@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 21:07:23 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/05 10:18:07 by akivam           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
@@ -17,10 +5,8 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <fcntl.h>
+# include <unistd.h>
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);

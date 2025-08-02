@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 21:07:25 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/05 10:18:54 by akivam           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "get_next_line.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -70,7 +58,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer = ft_calloc(1, BUFFER_SIZE + 1);
+	buffer = ft_calloc(BUFFER_SIZE + 1, 1);
 	if (!buffer)
 		return (NULL);
 	while (!ft_strchr(stash, '\n'))

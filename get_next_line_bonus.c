@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: akivam <akivam@student.42istanbul.com.t    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 21:07:36 by akivam            #+#    #+#             */
-/*   Updated: 2025/07/05 10:18:39 by akivam           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -63,14 +51,14 @@ char	*update_stash(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash[MAX_FD];
+	static char	*stash[4096];
 	char		*buffer;
 	ssize_t		read_byte;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer = ft_calloc(1, BUFFER_SIZE + 1);
+	buffer = ft_calloc(BUFFER_SIZE + 1, 1);
 	if (!buffer)
 		return (NULL);
 	while (!ft_strchr(stash[fd], '\n'))
